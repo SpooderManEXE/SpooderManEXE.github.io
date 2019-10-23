@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
 int main(){
-return 0;
+  cout<<"why is this empty?";
+  return 0;
 }

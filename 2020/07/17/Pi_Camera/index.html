@@ -6,7 +6,7 @@
 	<link rel="shortcut icon" href="/img/logo_miccall.png">
 	
 			    <title>
-    Hexo
+    CraftCoder By Sulthan Nizarudin
     </title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="/css/dropdownMenu.css" />
     <meta name="keywords" content="Sulthan Nizarudin" />
     
-    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-	 
     <noscript>
         <link rel="stylesheet" href="/css/noscript.css" />
     </noscript>
@@ -84,7 +82,7 @@
         <!-- Intro 头部显示 e -->
         <!-- Header 头部logo start -->
         <header id="header">
-    <a href="/" class="logo">Tech and Tips by Sulthan Nizarudin</a>
+    <a href="/" class="logo">CraftCoder By Sulthan Nizarudin</a>
 </header>
         <!-- Nav 导航条 start -->
         <nav id="nav" class="special" >
@@ -95,40 +93,22 @@
 	        </li>
 			<!-- categories_name  分类   --> 
 	        
+	        <!-- archives  归档   --> 
+	        
 	        <li class="active">
-	            <a href="#s1">Categories</a>
+	            <a href="#s1">Projects</a>
 	                    <ul class="submenu">
 	                        <li>
-	                        
+	                        <a class="archive-link" href="/archives/2020/07/">July 2020</a>
 	                    </ul>
 	        </li>
-	        
-	        <!-- archives  归档   --> 
 	        
 	        
 		        <!-- Pages 自定义   -->
 		        
 		        <li>
-		            <a href="/about/" title="About">
-		                About
-		            </a>
-		        </li>
-		        
-		        <li>
-		            <a href="/group/" title="Group">
-		                Group
-		            </a>
-		        </li>
-		        
-		        <li>
-		            <a href="/gallery/" title="Gallery">
-		                Gallery
-		            </a>
-		        </li>
-		        
-		        <li>
-		            <a href="/tag/" title="Tag">
-		                Tag
+		            <a href="/about/" title="About Me">
+		                About Me
 		            </a>
 		        </li>
 		        
@@ -145,8 +125,8 @@
                     </li>
                     
                     <li>
-                        <a title="500px" href="http://500px.com" target="_blank" rel="noopener">
-                            <i class="icon fa fa-500px"></i>
+                        <a title="instagram" href="https://www.instagram.com/_semicolon._" target="_blank" rel="noopener">
+                            <i class="icon fa fa-instagram"></i>
                         </a>
                     </li>
                     
@@ -167,10 +147,10 @@
 
 
 <h2 id="System-Setup"><a href="#System-Setup" class="headerlink" title="System Setup:"></a>System Setup:</h2><h3 id="Basic-Setup"><a href="#Basic-Setup" class="headerlink" title="Basic Setup:"></a>Basic Setup:</h3><p>Download the latest version of Raspbian Lite if you haven’t already. You do not need the regular full version; “Lite” is adequate for this project’s needs and can fit on a 2GB card with room to spare. You’ll also need a keyboard and monitor attached, and a Ethernet adapter.</p>
-<blockquote><p>Download the lite version from <a href="https://www.raspberrypi.org/downloads/raspberry-pi-os/" target="_blank" rel="noopener">https://www.raspberrypi.org/downloads/raspberry-pi-os/</a></p>
+<blockquote><p>Download the lite version from <a href="https://www.raspberrypi.org/downloads/raspberry-pi-os/" target="_blank" rel="noopener">https://www.raspberrypi.org/downloads/raspberry-pi-os/</a> and write the OS to an 2GB or larger SD card using Imager downloadable at <a href="https://www.raspberrypi.org/downloads/" target="_blank" rel="noopener">https://www.raspberrypi.org/downloads/</a></p>
 </blockquote>
 
-<p>Write the OS to an 2GB or larger SD card, insert in the Raspberry Pi and power it up. After a minute or so you’ll get a login prompt. Log in with the usual default pi/raspberry user and password.</p>
+<p>Insert in the Raspberry Pi and power it up. After a minute or so you’ll get a login prompt. Log in with the usual default pi/raspberry user and password.</p>
 <blockquote><p>user: pi<br>password: raspberry</p>
 </blockquote>
 
@@ -206,10 +186,23 @@
 
 <h2 id="Connections"><a href="#Connections" class="headerlink" title="Connections:"></a>Connections:</h2><img src="/2020/07/17/Pi_Camera/img3.jpg" class="" title="Pinout">
 
+<h3 id="Camera"><a href="#Camera" class="headerlink" title="Camera:"></a>Camera:</h3><p>Connecting the camera to the Raspberry Pi is explained (with video) on the Raspberry Pi web site. Note that there is a specific orientation for the cable…the blue tape at each end must face a particular side or it won’t work.</p>
+<p>Test camera using:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">raspistill -o cam.jpg</span><br></pre></td></tr></table></figure>
+<h3 id="Printer"><a href="#Printer" class="headerlink" title="Printer:"></a>Printer:</h3><p>When making the connection between Pi and printer, these wires must be crossed. TX from the Pi connects to RX on the printer, and RX to TX. It is powered by connecting to +5V and GND.</p>
+<h3 id="Buttons"><a href="#Buttons" class="headerlink" title="Buttons:"></a>Buttons:</h3><p>There are two buttons on this camera project. The first is the shutter release to take a photo. The other button initiates an orderly system shutdown before you switch off the power. This button needs to be held for at least two seconds, so it won’t trigger accidentally. Once activated, allow 20 seconds or so for the shutdown to complete before switching off power.</p>
+<blockquote><p>The shutter button is connected to GPIO 16 and power button to GPIO 21</p>
+</blockquote>
 
+<img src="/2020/07/17/Pi_Camera/img4.jpg" class="" title="Pi Pinout">
 
+<h3 id="Power"><a href="#Power" class="headerlink" title="Power:"></a>Power:</h3><p>Power from the battery pack needs to be split to both the Raspberry Pi and the printer. If using the Perma-Proto HAT, this is super easy: use the +5V and GND rails on the board; battery pack and printer can both connect there. If wiring manually, you may need to splice two ways off the battery pack to both the Pi and printer.</p>
+<blockquote><p>Do not install alkaline cells</p>
+</blockquote>
 
-
+<h2 id="Assemble-and-Customize"><a href="#Assemble-and-Customize" class="headerlink" title="Assemble and Customize:"></a>Assemble and Customize:</h2><blockquote><p>Use the box the printer came in as a DIY enclosure!</p>
+<p>If you already tossed the box, or if you need a different shape (for example, using a different Pi board or a different battery), not to worry…you can improvise from almost anything. Maybe a slightly larger box or some kind of Tupperware-like plastic container. Improvise, go nuts, it is not rocket science.</p>
+<footer><strong>P Burgess --</strong><cite><a href="https://learn.adafruit.com/users/pburgess" target="_blank" rel="noopener">learn.adafruit.com/users/pburgess</a></cite></footer></blockquote>
 
 
 <p>Reference: <a href="https://learn.adafruit.com/instant-camera-using-raspberry-pi-and-thermal-printer" target="_blank" rel="noopener">Adafruit</a></p>
@@ -304,15 +297,15 @@ $('.btn_click_load').click(function() {
 
         </div>
         <!-- Copyright 版权 start -->
-              <!--  <div id="copyright">
+        <div id="copyright">
             <ul>
-                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener" style="border-bottom: none;">hexo</a></li>
-                <li>Design: <a href="http://miccall.tech " target="_blank" rel="noopener" style="border-bottom: none;">miccall</a></li>
+                <li>&copy;Owned By <a href="mailto:n.sultan001@gmail.com" style="border-bottom: none;">Sulthan Nizarudin</a></li>
+                <li>Part of : <a href="https://www.youtube.com/user/salukitchen" target="_blank" rel="noopener" style="border-bottom: none;">CraftCoder By Sulthan Nizarudin</a></li>
             </ul>
             
-                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+				<span id="busuanzi_container_site_pv"> 2020 </span>
 			
-        </div>-->
+        </div>
 
     </div>
 </body>

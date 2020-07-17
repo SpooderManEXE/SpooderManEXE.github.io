@@ -18,5 +18,8 @@ typewriter.typeString('I am also a ')
     .deleteChars(9)
     .typeString('<strong><u>Gamer!</u></strong>')
     .pauseFor(700)
+    .deleteChars(6)
+    .typeString('<strong><u>Cook!</u></strong>')
+    .pauseFor(700)
     .start();
 });

@@ -1,4 +1,11 @@
 <html>
+<link rel="bookmark"  type="image/x-icon"  href="/Onam2020/sultan.png"/>
+<link rel="shortcut icon" href="sultan.png">
+
+        <title>
+  CraftCoder By Sulthan Nizarudin
+  </title>
+  <meta name="keywords" content="Sulthan Nizarudin,CraftCoder,Onam,Poster,Youtube" />
 <script src="canvas2image.js"></script>
 <link rel="stylesheet" href="bootstrap.min.css">
 <meta name="viewport" content="width=device-width" />
@@ -7,9 +14,9 @@
 @font-face {
   font-family: LEMONCAKE;
   src:     url('Lemon-Cake.ttf.woff') format('woff'),
-    url('https://webfonts.ffonts.net/webfonts/L/E/Lemon-Cake/Lemon-Cake.ttf.svg#Lemon-Cake') format('svg'),
-    url('https://webfonts.ffonts.net/webfonts/L/E/Lemon-Cake/Lemon-Cake.ttf.eot'),
-    url('https://webfonts.ffonts.net/webfonts/L/E/Lemon-Cake/Lemon-Cake.ttf.eot?#iefix') format('embedded-opentype');
+    url('Lemon-Cake.ttf.svg#Lemon-Cake') format('svg'),
+    url('Lemon-Cake.ttf.eot'),
+    url('Lemon-Cake.ttf.eot?#iefix') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
 }

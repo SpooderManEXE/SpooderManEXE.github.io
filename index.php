@@ -1,4 +1,11 @@
 <html>
+<link rel="bookmark"  type="image/x-icon"  href="/Onam2020/sultan.png"/>
+<link rel="shortcut icon" href="/Onam2020/sultan.png">
+
+        <title>
+  CraftCoder By Sulthan Nizarudin
+  </title>
+  <meta name="keywords" content="Sulthan Nizarudin,CraftCoder,Onam,Poster,Youtube" />
 <meta name="viewport" content="width=device-width" />
 <link rel="stylesheet" href="Onam2020/bootstrap.min.css">
 <style>

@@ -53,7 +53,7 @@ function setLocation(element) {
 
 
     <p class="h4 mb-2">CUSTOM WISH</p><textarea type="text" name="wish" id="wish" class="form-control mb-2" maxlength=125 rows=4><?php
-$a=array("Here’s wishing you health, wealth and happiness. May the spirit of Onam remain everywhere. Cheers to the beautiful festival.","Let the sweet frangrance of flowers fill our homes and the aroma of home-cooked delicacies tease our senses.","On this joyous occasion of Onam, I wish you joy and good health and may you always enjoy the bounty of nature!", "May King Mahabali bless you with good health and happiness. May all your hopes, dreams and wishes come true.", "May the colours and joy of Onam fill your home and heart with happiness and prosperity. May you always enjoy a good fortune.");
+$a=array("Here’s wishing you health, wealth and happiness. May the spirit of Onam remain everywhere.","Let the sweet frangrance of flowers fill our homes and the aroma of home-cooked delicacies tease our senses.","On this joyous occasion of Onam, I wish you joy and good health and may you always enjoy the bounty of nature!", "May King Mahabali bless you with good health and happiness. May all your hopes, dreams and wishes come true.", "May the colours and joy of Onam fill your home and heart with happiness and prosperity. May you always enjoy a good fortune.");
 shuffle($a);
 $random_keys=array_rand($a,5);
 echo $a[$random_keys[0]];
@@ -75,7 +75,7 @@ echo $a[$random_keys[0]];
 </div>
     </div>
 
-    <button class="btn btn-info btn-block" type="submit">GENERATE POSTER</button>
+    <button class="btn btn-info btn-block" type="submit">CREATE POSTER</button>
 
 </form>
 </div>
@@ -83,7 +83,7 @@ echo $a[$random_keys[0]];
 
   <!-- Copyright -->
   <div class="footer-copyright text-center">Subscribe:
-    <a href="https://www.youtube.com/channel/UCmszvVQKqM7v5PR_nMrm7YQ/"> CraftCoder by Sulthan Nizarudin</a>
+    <a href="https://www.youtube.com/channel/UCmszvVQKqM7v5PR_nMrm7YQ?sub_confirmation=1/"> CraftCoder by Sulthan Nizarudin</a>
   </div>
   <!-- Copyright -->
 

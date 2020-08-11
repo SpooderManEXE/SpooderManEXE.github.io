@@ -9,7 +9,9 @@
 <script src="canvas2image.js"></script>
 <link rel="stylesheet" href="bootstrap.min.css">
 <meta name="viewport" content="width=device-width" />
-
+<script type="module">
+handleImage(false);
+</script>
 <style>
 @font-face {
   font-family: LEMONCAKE;
@@ -77,10 +79,34 @@ canvas {
 #canvasID {
   z-index: 9999;
 }
+#overlay {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.75);
+  z-index: 2;
+  cursor: pointer;
+}
 
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
 </style>
 
-
+<div id="overlay" onclick="off()">
+  <div id="text">Support by Subscribing to "CraftCoder by Sulthan Nizarudin"</div>
+</div>
 <div class="page-wrap">
   <div class="controls">
     <style>
@@ -95,9 +121,11 @@ canvas {
       }
     }
   </style>
+<!--<button type="button" id="refresh" class="btn btn-primary btn-lg btn-block mob">REFRESH</button>-->
+
 <button type="button" id="download" class="btn btn-primary btn-lg btn-block mob">DOWNLOAD</button>
 <h5><small id="passwordHelpBlock" class="form-text text-muted mb-4">
-REFRESH if text has not loaded.    </small></h5>
+Please wait a while for it complete loading before downloading </small></h5>
 
 
   </div>
@@ -108,13 +136,21 @@ REFRESH if text has not loaded.    </small></h5>
   </div>
 
 </div>
+
 <script>
 var nam="<?php echo $_GET["name"] ?>";
 var wish="<?php echo $_GET["wish"] ?> ";
 
 </script>
 <script>
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
 
+function off() {
+  document.getElementById("overlay").style.display = "none";
+  handleImage(false);
+}
 var text_title ="";
 var imageLoader = document.getElementById('imageLoader');
     window.addEventListener('load', handleImage, false);
@@ -222,7 +258,10 @@ document.getElementById('download').onclick = function download() {
 		//convertToImage();
     Canvas2Image.saveAsPNG(canvas, 1920, 1080, "Wish_Wide")
 }
-
+document.getElementById('refresh').onclick = function download() {
+		//convertToImage();
+  handleImage(false);
+}
 
 </script>
 </html>

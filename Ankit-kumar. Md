@@ -1,0 +1,27 @@
+<html>
+<head><link rel="stylesheet" type="text/css" href="style.css"></head>
+<body>
+  <div class="wrapper">
+    <div class="left">
+
+
+      <img class="profile-picture" src="https://www.google.com/search?q=no+copyright+images&tbm=isch&chips=q:no+copyright+images,g_1:technology&client=ms-android-xiaomi-rev1&prmd=inv&hl=en-GB&sa=X&ved=2ahUKEwjWxdHFiKLsAhX1g2MGHYb5BFwQ4lYoAHoECAEQCQ&biw=360&bih=640#imgrc=A9Ce31vU7-AoOM" width="200"/>
+      <h1 class="name">  *ankit kumar*  </h1>
+      <h4 class="subtitle">  *18*  </h4>
+
+
+    </div>
+    <div class="right">
+      <p class="bio">
+
+        *Dear sir i am a fresh coding student. i am learn basic html program*
+
+      </p>
+      <ul class="social link">
+
+        <li><a href="https://github.com/ankit351/"> ankit351 </a></li>
+
+      </ul>
+    </div>
+  </div>
+</body>
